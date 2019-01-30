@@ -1,0 +1,15 @@
+// Replace ENTER_TOKEN_HERE with a bot token
+// https://github.com/William010x/JavaBot/wiki/How-to-get-a-bot-token
+
+token=ENTER_TOKEN_HERE
+
+
+// Replace ENTER_OWNER_ID_HERE with owner's ID
+// https://github.com/William010x/JavaBot/wiki/How-to-get-owner-ID
+
+owner=ENTER_OWNER_ID_HERE
+
+
+// Optional: add prefix for commands here
+// By default, bot responds to the prefix >helpme
+prefix=>
