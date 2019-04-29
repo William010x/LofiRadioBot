@@ -28,10 +28,10 @@ public class Main {
 					.build();
 
 			CommandClientBuilder builder = new CommandClientBuilder();
-			builder.setOwnerId(config.getOwnerId());
+			builder.setOwnerId(Long.toString(config.getOwnerId()));
 			builder.setPrefix(config.getPrefix());
 			builder.setHelpWord("helpme");
-			builder.setHelpConsumer(event -> event.replyInDm(formatHelp(event)));
+			builder.setHelpConsumer(event -> event.replyInDm(formatHelp(event, config.getPrefix())));
 			
 			builder.addCommand(new PingCommand());
 			builder.addCommand(new HelpCommand());
@@ -72,7 +72,7 @@ public class Main {
 		}
 	}
 	
-	public static Message formatHelp(CommandEvent event)
+	public static Message formatHelp(CommandEvent event, String prefix)
     {
         EmbedBuilder embed = new EmbedBuilder();
         embed.setColor(ColorGenerator.randomColor());
@@ -101,7 +101,7 @@ public class Main {
         	
         	commandsInCategory.forEach(cmd -> 
         		{
-        			commands.append("**!" + cmd.getName() + (cmd.getArguments()==null ? "" : " " + cmd.getArguments()) + "**: ");
+        			commands.append("**" + prefix + cmd.getName() + (cmd.getArguments()==null ? "" : " " + cmd.getArguments()) + "**: ");
         			commands.append(cmd.getHelp()+"\n");
         		});
         	embed.addField("__" + category + " commands:__", commands.toString(), false);
