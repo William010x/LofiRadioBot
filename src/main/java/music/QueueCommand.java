@@ -7,7 +7,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 
 import constants.EmbedGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
+import net.dv8tion.jda.api.EmbedBuilder;
 
 public class QueueCommand extends MusicCommand {
 	public QueueCommand(MusicPlayer musicPlayer) {

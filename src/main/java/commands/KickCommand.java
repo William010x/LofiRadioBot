@@ -6,9 +6,9 @@ import java.util.concurrent.TimeUnit;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import constants.EmbedGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.MessageBuilder;
-import net.dv8tion.jda.core.entities.Message;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.entities.Message;
 
 public class KickCommand extends GeneralCommand {
 	public KickCommand() {
@@ -78,13 +78,10 @@ public class KickCommand extends GeneralCommand {
 							TimeUnit.SECONDS.sleep(10);
 							m.editMessage(embed.build()).queue();
 							//TimeUnit.SECONDS.sleep(5);
-							event.getChannel().getMessageById(id.toString()).queue(n ->
+							event.getChannel().retrieveMessageById(id.toString()).queue(n ->
 									{
 										int kick = n.getReactions().get(0).getCount();
 										int stay = n.getReactions().get(1).getCount();
-										
-										System.out.println(kick);
-										System.out.println(stay);
 										
 										//EmbedBuilder e = EmbedGenerator.makeEmbed();
 										if (kick > stay) {

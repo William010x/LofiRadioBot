@@ -1,9 +1,8 @@
-import net.dv8tion.jda.core.AccountType;
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.MessageBuilder;
-import net.dv8tion.jda.core.entities.*;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.MessageBuilder;
+import net.dv8tion.jda.api.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +22,7 @@ public class Main {
 		try {
 			Config config = new Config();
 			
-			JDA bot = new JDABuilder(AccountType.BOT)
-					.setToken(config.getToken())
+			JDA bot = JDABuilder.createDefault(config.getToken())
 					.build();
 
 			CommandClientBuilder builder = new CommandClientBuilder();

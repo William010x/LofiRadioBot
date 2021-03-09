@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import constants.EmbedGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
+import net.dv8tion.jda.api.EmbedBuilder;
 
 public class PingCommand extends GeneralCommand {
 	public PingCommand() {
@@ -19,8 +19,8 @@ public class PingCommand extends GeneralCommand {
 	protected void execute(CommandEvent event) {
 		EmbedBuilder embed = EmbedGenerator.makeEmbed();
 		
-		long ping = event.getMessage().getCreationTime().until(event.getMessage().getCreationTime(), ChronoUnit.MILLIS);
-		embed.addField("Pong!", "**Ping: " + ping  + "ms**\n**Websocket: " + event.getJDA().getPing() + "ms**", false);
+		long ping = event.getMessage().getTimeCreated().until(event.getMessage().getTimeCreated(), ChronoUnit.MILLIS);
+		embed.addField("Pong!", "**Ping: " + ping  + "ms**\n**Websocket: " + event.getJDA().getGatewayPing() + "ms**", false);
 		event.reply(embed.build());
 		
 		/**

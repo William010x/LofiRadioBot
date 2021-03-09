@@ -3,9 +3,9 @@ package commands;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import constants.EmbedGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
-import net.dv8tion.jda.core.entities.Member;
-import net.dv8tion.jda.core.entities.User;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.User;
 
 public class UserCommand extends GeneralCommand {
 	public UserCommand() {
@@ -42,7 +42,7 @@ public class UserCommand extends GeneralCommand {
 			embed.addField("Name:", user.getAsMention(), true);
 			embed.addField("Nickname:", nickname, true);
 			embed.addField("Status:", event.getGuild().getMembersByName(userName, true).get(0).getOnlineStatus().toString(), true);
-			embed.addField("Created on:", user.getCreationTime().toString(), true);
+			embed.addField("Created on:", user.getTimeCreated().toString(), true);
 			embed.addField("Avatar:", "", true);
 			embed.setImage(user.getAvatarUrl());
 			

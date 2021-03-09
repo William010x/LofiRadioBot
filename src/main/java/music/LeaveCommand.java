@@ -3,7 +3,7 @@ package music;
 import com.jagrosh.jdautilities.command.CommandEvent;
 
 import constants.ColorGenerator;
-import net.dv8tion.jda.core.EmbedBuilder;
+import net.dv8tion.jda.api.EmbedBuilder;
 
 public class LeaveCommand extends MusicCommand {
 	public LeaveCommand(MusicPlayer musicPlayer) {
