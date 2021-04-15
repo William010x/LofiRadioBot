@@ -2,6 +2,11 @@
 
 A basic, multi-purpose Discord bot.
 
+![](https://i.imgur.com/B6WrfPe.png)
+
+# Features/Commands
+![List of commands](https://i.imgur.com/kHVReXK.png)
+
 # [Setup](https://github.com/William010x/JavaBot/wiki/Setup)
 
 ## Installation:
