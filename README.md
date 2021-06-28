@@ -1,11 +1,17 @@
 # [JavaBot](https://github.com/William010x/JavaBot/wiki)
 
-A basic, multi-purpose Discord bot.
+JavaBot is a music-player and moderation Discord bot.
 
 ![](https://i.imgur.com/B6WrfPe.png)
 
-# Features/Commands
-![List of commands](https://i.imgur.com/kHVReXK.png)
+# Features
+- Volume control
+- View all tracks in queue
+- Add/remove tracks from the queue
+- Pause/play/skip/loop tracks
+- Vote to kick users
+- Get user info
+- Posting images and gifs
 
 # [Setup](https://github.com/William010x/JavaBot/wiki/Setup)
 
