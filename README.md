@@ -1,6 +1,6 @@
 # [JavaBot](https://github.com/William010x/JavaBot/wiki)
 
-JavaBot is a multi-purpose Discord bot to play music and moderate your server. Supports Soundclud, YouTube, Spotify and Twitch with volume control and other DJ features.
+JavaBot is a multi-purpose Discord bot to play music and moderate your server. Supports Soundcloud, YouTube, Spotify, Twitch, Vimeo, Bandcamp and HTTP URLs with volume control and other DJ features.
 
 ![](https://i.imgur.com/B6WrfPe.png)
 

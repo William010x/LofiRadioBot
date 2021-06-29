@@ -14,7 +14,7 @@ public class QueueCommand extends MusicCommand {
 		super(musicPlayer);
 		this.name = "queue";
 		this.aliases = new String[] {"list", "songs", "upcoming"};
-		this.help = "Lists all tracks current in the queue.";
+		this.help = "Lists all tracks currently in the queue.";
 	}
 
 	@Override
